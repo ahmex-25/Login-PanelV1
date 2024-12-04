@@ -1,0 +1,174 @@
+body {
+    background-color: rgb(235, 235, 235);
+    font-family: sans-serif;
+}
+
+input {
+    outline: none;
+}
+
+/* Main container */
+.parncipal {
+    background-color: white;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 80vh;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Left section */
+.left_section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: #007bff;
+    padding: 2rem;
+}
+
+.content_left {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content_left p {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 1rem;
+    color: white;
+}
+
+.ayh_account {
+    background-color: #0064cf;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    margin-top: 1.5rem;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+.ayh_account:hover {
+    background-color: white;
+    color: #0064cf;
+    border-color: #0064cf;
+}
+
+.left_section h5 {
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/* Right section */
+.right_section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 30px;
+}
+
+.text-signup {
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+}
+
+.right_section input {
+    background-color: rgb(235, 235, 235);
+    width: 90%;
+    margin: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.b-signup {
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: white;
+    font-family: sans-serif;
+    background-color: #007bff;
+    transition: 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.b-signup:hover {
+    background-color: #0056b3;
+}
+
+.short_login_section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (min-width: 768px) {
+    .parncipal {
+        flex-direction: row;
+    }
+
+    .left_section,
+    .right_section {
+        width: 50%;
+    }
+
+    .left_section {
+        min-height: 80vh;
+    }
+}
+
+/* Cross-browser compatibility */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fallbacks for older browsers */
+.parncipal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.left_section,
+.right_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.right_section input:focus{
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 0 0.2rem rgba(0, 86, 179, 0.5);
+}
